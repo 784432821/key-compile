@@ -5,12 +5,9 @@ LABEL maintainer="liusheng build" \
 
 WORKDIR /root
 
-RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
-RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
-
 RUN apt-get clean && apt-get update
 RUN apt-get install -y make cmake python3 python3-pip
-RUN pip3 install meson ninja pyelftools -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+RUN pip3 install meson ninja pyelftools
 
 RUN apt-get install -y pkg-config curl wget
 
