@@ -1,4 +1,4 @@
-# kvm-compile
+# key-compile
 Docker compilation container for KEY programs
 
 # Create a compilation container
